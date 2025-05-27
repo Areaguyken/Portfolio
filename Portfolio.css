@@ -1,0 +1,79 @@
+body{
+    background-color: rgb(58, 3, 110);
+}
+h1{
+    text-align: center;
+}
+.fullpage{           
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+#up{
+    display: flex;
+    width: 100%;
+    height: 525px;
+}
+#left{
+    width: 40%;
+    height: 500px;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid blue;
+}
+#text1{
+    width: 100%;
+    height: 40%;
+    margin-top: 25%;
+    border: 2px solid blue;
+}
+#text1 pre{
+    text-decoration-color: white;
+    text-spacing-trim: 0pt;
+}
+#right{
+    width: 40%;
+    height: 500px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: black;
+    margin-left: 40px;
+    border: 2px solid blue;
+}
+
+#text2{
+    width: 100%;
+    height: 80%;
+    border: 2px solid blue;
+}
+#right ul li button{
+    margin-left: 90px;
+    background-color: bisque;
+    text-decoration-thickness: bold;
+}
+#bottom{
+    width: 40%;
+    height: 30px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+#bottom a{
+    margin-left: 120px;
+    text-decoration-thickness: bold;
+}
+.fadein{
+    animation: fadein 3s;
+}
+.fadeout{
+    animation: fadeout 3s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Portfolio.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>My Portfolio</h1>
+    <section class="fullpage">
+        <div id="up">
+            <div id="left">
+                <div id="text1">
+                    <h4>Hi, I am</h4>
+                    <h2>Ken Kelly</h2>
+                    <p>Web Developer & Designer</p>
+                </div>
+            </div>
+            <div id="right">
+                <ul>
+                    <li>
+                        <a href="index.html"><button>Home</button></a>
+                        <a href="About.html"><button>About</button></a>
+                        <a href="Contact.html"><button>Contact</button></a>
+                    </li>
+                </ul>
+                <div id="text2"></div>
+            </div>
+        </div>
+        <div id="bottom">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x" style="color:white; margin: 0 10px;"></i></a>
+            <a href="https://instagram.com/unrulyxcalez/" target="_blank"><i class="fab fa-instagram fa-2x" style="color:white; margin: 0 10px;"></i></a>
+            <a href="mailto:ssejjengoken@gmail.com"><i class="fas fa-envelope fa-2x" style="color:white; margin: 0 10px;"></i></a>
+        </div>
+
+    </section>
+    <script>
+        document.body.classList.add("fadein");
+        document.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            if (href && !href.startsWith("#") && !href.startsWith("mailto")) {
+              e.preventDefault();
+              document.body.classList.remove("fadein");
+              document.body.classList.add("fadeout");
+              setTimeout(() => {
+                window.location.href = href;
+              }, 600); 
+            }
+          });
+        });
+    </script>
+</body>
+</html>
